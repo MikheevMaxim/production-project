@@ -1,15 +1,15 @@
-import { AppLink } from "shared/ui/AppLink";
-import { classNames } from "shared/lib/classNames/classNames";
-import { AppLinkTheme } from "shared/ui/AppLink/AppLink";
-import cls from './Navbar.module.scss';
+import { type FC } from 'react'
 
+import { AppLink } from 'shared/ui/AppLink'
+import { classNames } from 'shared/lib/classNames/classNames'
+import { AppLinkTheme } from 'shared/ui/AppLink/AppLink'
+import cls from './Navbar.module.scss'
 
 interface NavbarProps {
-  className?: string;
+  className?: string
 }
 
-export const Navbar = ({ className }: NavbarProps) => {
-
+export const Navbar: FC<NavbarProps> = ({ className }) => {
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>
       <div className={cls.links}>
@@ -29,4 +29,4 @@ export const Navbar = ({ className }: NavbarProps) => {
       </div>
     </div>
   )
-};
+}
