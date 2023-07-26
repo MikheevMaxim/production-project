@@ -10,7 +10,8 @@ module.exports = {
     },
     "extends": [
         "standard-with-typescript",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:i18next/recommended",
     ],
     "overrides": [
         {
@@ -28,11 +29,12 @@ module.exports = {
     "parserOptions": {
         "ecmaVersion": "latest",
         "sourceType": "module",
-        "project": ["./tsconfig.json"]
+        "project": "./tsconfig.json"
     },
     "plugins": [
         "react",
-        "@typescript-eslint"
+        "@typescript-eslint",
+        'i18next'
     ],
     "rules": {
         "react/react-in-jsx-scope": "off",
@@ -42,6 +44,7 @@ module.exports = {
         "@typescript-eslint/no-floating-promises": "off",
         "@typescript-eslint/no-misused-promises": "off",
         "@typescript-eslint/ban-ts-comment": "off",
-        "react/no-deprecated": "off"
+        "react/no-deprecated": "off",
+        "i18next/no-literal-string": ['error', { markupOnly: true }],
     }
 }
